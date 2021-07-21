@@ -32,6 +32,7 @@ jobs:
           rm -r *
           mv ../main/dist/* .
           git add .
+          git diff --staged --quiet --exit-code && exit # no changes
           git config user.name "Nicolas Lepage (actions)"
           git config user.email 19571875+nlepage@users.noreply.github.com
           git commit -m "$MESSAGE"
