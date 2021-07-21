@@ -7,18 +7,41 @@ jobs:
   pages:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout main
         uses: actions/checkout@v2
         with:
           path: main
-      
+
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.3.0
 
       - name: Install dependencies
         run: yarn
         working-directory: main
-        
+
       - name: Build
         run: yarn build --base /build-userfriendly-cli-tool-talk/
         working-directory: main
+
+      - name: Checkout pages
+        uses: actions/checkout@v2
+        with:
+          ref: pages
+          path: pages
+
+      - name: Clean pages
+        run: rm -r *
+        working-directory: pages
+
+      - name: Copy pages
+        run: mv main/dist/* pages
+
+      - name: Commit pages
+        run: git add . && git commit -m "$MESSAGE"
+        working-directory: pages
+        env:
+          MESSAGE: ${{github.event.commits[0].message}}
+
+      - name: Push pages
+        run: git push
+        working-directory: pages

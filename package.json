@@ -1,4 +1,5 @@
 {
+  "name": "build-userfriendly-cli-tool-talk",
   "private": true,
   "scripts": {
     "dev": "slidev --open",
@@ -10,6 +11,5 @@
     "@slidev/theme-default": "*",
     "@slidev/theme-seriph": "*",
     "slidev-theme-unicorn": "^1.0.21"
-  },
-  "name": "build-userfriendly-cli-tool-talk"
+  }
 }
