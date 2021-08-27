@@ -7,7 +7,6 @@
  - Options vs sous-commandes
  - Commandes fourre-tout
 
-
 ## Idées
 
  - Personnalisation: Enregistrement de config (git config), viper ou autre, plus stdlib
@@ -23,10 +22,6 @@
 ## Références
 
 https://www.gresearch.co.uk/article/in-praise-of-dry-run/
-
-
-
-## Notes
 
 ### Intro suite
 
