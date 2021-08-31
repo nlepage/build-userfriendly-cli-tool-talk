@@ -20,7 +20,7 @@ layout: intro
 </div>
 
 ---
-layout: statement
+layout: fact
 ---
 
 # ⚠ Disclaimer ⚠
