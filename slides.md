@@ -26,6 +26,12 @@ layout: fact
 # ⚠ Disclaimer ⚠
 
 ---
+layout: full
+class: bg-black
+---
+
+
+---
 ---
 
 ```sh {all|1}

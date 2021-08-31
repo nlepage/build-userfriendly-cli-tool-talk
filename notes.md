@@ -12,7 +12,7 @@
  - Personnalisation: Enregistrement de config (git config), viper ou autre, plus stdlib
  - Arguments positionnelles, ln
  - Utiliser catption en fil rouge ? Plutôt à la fin
- - Intégration avec système: xdg-open etc.
+ - Intégration avec système: xdg-open etc., attention à prévoir une option pour désactiver
  - Guider l'utilisateur, git status
  - Commande d'installation d'autocomplétion
  - Coloration emojis
