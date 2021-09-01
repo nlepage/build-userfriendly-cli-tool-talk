@@ -3,7 +3,7 @@
  - Intro
  - Disclaimer: pas d'outil interactifs (éditeurs, REPL...)
  - Intro suite 
- - Respecter les conventions
+ - Respecter les conventions (options, help, etc)
  - Options vs sous-commandes
  - Commandes fourre-tout
 
