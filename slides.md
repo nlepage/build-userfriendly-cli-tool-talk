@@ -42,7 +42,7 @@ class: bg-black
 
 ---
 
-```sh {all|1}
+``` {all|1}
 $ ps aux
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
 root           1  0.0  0.0 165992 11536 ?        Ss   12:00   0:01 /sbin/init
@@ -97,7 +97,7 @@ layout: section
 
 # Options longues
 
-```sh {all|2|3|4|all}
+``` {all|2|3|4|all}
 $ grep \
     --ignore-case \
     --invert-match \
@@ -116,7 +116,7 @@ $ grep \
 
 # Options courtes
 
-```sh {all|1|3|all}
+``` {all|1|3|all}
 $ grep -i -v -c needle haystack.txt
 21
 $ grep -ivc needle haystack.txt
@@ -133,7 +133,7 @@ $ grep -ivc needle haystack.txt
 
 # Options usuelles
 
-```sh
+```
 $ grep --version
 grep (GNU grep) 3.6
 Copyright (C) 2020 Free Software Foundation, Inc.
@@ -155,7 +155,7 @@ Written by Mike Haertel and others; see
 
 # Options usuelles
 
-```sh
+```
 $ grep --help
 Usage: grep [OPTION]... PATTERNS [FILE]...
 Search for PATTERNS in each FILE.
@@ -185,7 +185,70 @@ layout: statement
 class: align-middle
 ---
 
-<h1 class="inline-flex gap-30 items-end">
-  <img src="/cobra.png" class="inline w-60" />
+<h1 class="flex gap-30 items-end justify-center">
+  <img alt="cobra" src="/cobra.png" class="inline w-60" />
   <div>urfave/cli</div>
 </h1>
+
+---
+
+# <img alt="cobra" src="/cobra.png" class="inline w-40" />
+
+```go {all|1,2,10|1,3,10|1,4-6,10|1,7-10|12-17}
+var rootCmd = &cobra.Command{
+  Use:   "hugo",
+  Short: "Hugo is a very fast static site generator",
+  Long: `A Fast and Flexible Static Site Generator built with
+                love by spf13 and friends in Go.
+                Complete documentation is available at http://hugo.spf13.com`,
+  Run: func(cmd *cobra.Command, args []string) {
+    // Do Stuff Here
+  },
+}
+
+func main() {
+  if err := rootCmd.Execute(); err != nil {
+    fmt.Fprintln(os.Stderr, err)
+    os.Exit(1)
+  }
+}
+```
+
+<style>
+  code {
+    @apply text-sm
+  }
+</style>
+
+---
+
+# <img alt="cobra" src="/cobra.png" class="inline w-40" />
+
+```go
+var (
+  author string
+  verbose bool
+)
+
+func init() {
+  rootCmd.Flags().StringVar(&author, "author", "YOUR NAME", "Author name for copyright attribution")
+  rootCmd.Flags().BoolVarP(&verbose, "verbose", "v", false, "verbose output")
+}
+```
+
+---
+
+```
+$ hugo --help
+A Fast and Flexible Static Site Generator built with
+love by spf13 and friends in Go.
+Complete documentation is available at http://hugo.spf13.com
+
+Usage:
+  hugo [flags]
+
+Flags:
+      --author string   Author name for copyright attribution (default "YOUR NAME")
+  -h, --help            help for hugo
+  -v, --verbose         verbose output
+```
