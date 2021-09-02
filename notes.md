@@ -1,3 +1,32 @@
+## Abstract
+
+La ligne de commande c'est austère... et on est nombreux à préférer l'éviter si possible.<br>
+Cependant de nombreux outils ne sont disponibles que par ce biais, et on se sent parfois bien démuni quand on veut les utiliser... **mais ça ne devrait pas être le cas !**
+
+Le design pour un outil de ligne de commande, comme pour toute application, peut changer radicalement l'expérience utilisateur en bien ou en mal.<br>
+Mais qu'est-ce qui fait **un bon outil de CLI** : simplicité ? respect des conventions ? intuitivité ? personnalisation ? intégration avec l'environnement ? auto-complétion ? ~une interface graphique ?~
+
+**Inventons la Command Line eXperience !**
+
+L'éco-système Go autour des CLIs est très développé, voyons comment en tirer partie pour construire rapidement **un outil facile et agréable à utiliser**.
+
+## Infos
+
+Ce talk s'articulera autour de deux axes principaux :
+1. Au travers d'exemples très connus (ps, git, docker...), mettre en avant ce qui fait qu'un outil de ligne de commande peut être simple à utiliser sans même avoir lu le manuel (ou bien l'inverse) !
+2. Comment s'appuyer sur l'écosystème Golang pour construire un outil de ligne de commande userfriendly.
+
+Le plan du talk n'est pas encore vraiment défini, mais voici quelques exemples :
+ - Options vs sous-commandes
+ - Commande fourre-tout vs commande avec un but clair et précis
+ - Intégration avec l'OS et ses fonctionnalités
+
+Les outils interactifs tels que les éditeurs de textes ou REPL ne seront pas abordés dans ce talk, sinon le sujet serait trop vaste...
+
+Le public visé :
+ - En particulier toute personne développant, ayant déjà ou souhaitant développer un outil de CLI
+ - Mais aussi toute personne utilisant au moins occasionnellement la ligne de commande
+
 ## Plan
 
  - Intro

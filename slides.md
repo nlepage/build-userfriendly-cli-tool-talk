@@ -19,6 +19,12 @@ layout: intro
   Nicolas Lepage - <a href="https://twitter.com/njblepage">@njblepage</a>
 </div>
 
+<!--
+Bien présenter les 2 axes du talk :
+ - Faire un outil userfriendly
+ - S'appuyer sur l'écosystème Go pour ça
+-->
+
 ---
 layout: fact
 ---
@@ -33,7 +39,6 @@ Pas d'outil interactifs (éditeurs, REPL...)
 layout: full
 class: bg-black
 ---
-
 
 ---
 
@@ -51,7 +56,7 @@ root           8  0.0  0.0      0     0 ?        I<   12:00   0:00 [mm_percpu_wq
 
 <v-clicks>
 
-**a** : Les process de tout le monde
+**a** : Les process de tout les utilisateurs
 
 **x** : Même les process sans tty
 
@@ -126,7 +131,7 @@ $ grep -ivc needle haystack.txt
 
 ---
 
-# Options connues
+# Options usuelles
 
 ```sh
 $ grep --version
@@ -148,7 +153,7 @@ Written by Mike Haertel and others; see
 
 ---
 
-# Options connues
+# Options usuelles
 
 ```sh
 $ grep --help
@@ -168,3 +173,19 @@ Pattern selection and interpretation:
     @apply text-sm
   }
 </style>
+
+---
+layout: fact
+---
+
+# Écosystème <img src="/Go-Logo_Blue.png" class="inline w-60" />
+
+---
+layout: statement
+class: align-middle
+---
+
+<h1 class="inline-flex gap-30 items-end">
+  <img src="/cobra.png" class="inline w-60" />
+  <div>urfave/cli</div>
+</h1>
