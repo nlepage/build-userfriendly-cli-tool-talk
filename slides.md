@@ -42,7 +42,7 @@ class: bg-black
 
 ---
 
-``` {all|1}
+```sh {all|1}
 $ ps aux
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
 root           1  0.0  0.0 165992 11536 ?        Ss   12:00   0:01 /sbin/init
@@ -97,7 +97,7 @@ layout: section
 
 # Options longues
 
-``` {all|2|3|4|all}
+```sh {all|2|3|4|all}
 $ grep \
     --ignore-case \
     --invert-match \
@@ -116,7 +116,7 @@ $ grep \
 
 # Options courtes
 
-``` {all|1|3|all}
+```sh {all|1|3|all}
 $ grep -i -v -c needle haystack.txt
 21
 $ grep -ivc needle haystack.txt
