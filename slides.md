@@ -194,13 +194,14 @@ class: align-middle
 
 # <img alt="cobra" src="/cobra.png" class="inline w-40" />
 
-```go {all|1,2,10|1,3,10|1,4-6,10|1,7-10|12-17}
+```go {all|1,2,11|1,3,11|1,4-6,11|1,7,11|1,8-11|13-18}
 var rootCmd = &cobra.Command{
   Use:   "hugo",
   Short: "Hugo is a very fast static site generator",
   Long: `A Fast and Flexible Static Site Generator built with
                 love by spf13 and friends in Go.
                 Complete documentation is available at http://hugo.spf13.com`,
+  Version: "v1.2.3",
   Run: func(cmd *cobra.Command, args []string) {
     // Do Stuff Here
   },
@@ -232,11 +233,13 @@ var (
 
 func init() {
   rootCmd.Flags().StringVar(&author, "author", "YOUR NAME", "Author name for copyright attribution")
-  rootCmd.Flags().BoolVarP(&verbose, "verbose", "v", false, "verbose output")
+  rootCmd.Flags().BoolVarP(&verbose, "verbose", "v", false, "Verbose output")
 }
 ```
 
 ---
+
+# <img alt="cobra" src="/cobra.png" class="inline w-40" />
 
 ```
 $ hugo --help
@@ -250,5 +253,39 @@ Usage:
 Flags:
       --author string   Author name for copyright attribution (default "YOUR NAME")
   -h, --help            help for hugo
-  -v, --verbose         verbose output
+  -v, --verbose         Verbose output
+      --version         version for hugo
 ```
+
+---
+layout: fact
+---
+
+<img alt="pacman" src="/pacman.png" class="inline w-100" />
+
+---
+
+# <img alt="pacman" src="/pacman.png" class="inline w-10" /> pacman
+
+```sh
+$ pacman -h
+usage:  pacman <operation> [...]
+operations:
+    pacman {-h --help}
+    pacman {-V --version}
+    pacman {-D --database} <options> <package(s)>
+    pacman {-F --files}    [options] [file(s)]
+    pacman {-Q --query}    [options] [package(s)]
+    pacman {-R --remove}   [options] <package(s)>
+    pacman {-S --sync}     [options] [package(s)]
+    pacman {-T --deptest}  [options] [package(s)]
+    pacman {-U --upgrade}  [options] <file(s)>
+
+use 'pacman {-h --help}' with an operation for available options
+```
+
+<!--
+L'utilisation des flags comme opérations/commandes porte à confusion.
+
+La distinction se fait par la casse en en flag court, et disparaît en flag long...
+-->
