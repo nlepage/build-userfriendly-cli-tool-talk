@@ -267,7 +267,7 @@ layout: fact
 
 # <img alt="pacman" src="/pacman.png" class="inline w-10" /> pacman
 
-```sh
+```sh {all|10}
 $ pacman -h
 usage:  pacman <operation> [...]
 operations:
