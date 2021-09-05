@@ -320,3 +320,96 @@ $ git commit -am "Add slides about git"
     @apply text-sm
   }
 </style>
+
+---
+
+# Commandes <img alt="cobra" src="/cobra.png" class="inline w-30 align-bottom" />
+
+```go {all|5,6,11|5,7,11|5,8-11|1-3}
+func init() {
+  rootCmd.AddCommand(tryCmd)
+}
+
+var tryCmd = &cobra.Command{
+  Use:   "try",
+  Short: "Try and possibly fail at something",
+  RunE: func(cmd *cobra.Command, args []string) error {
+    // do something and return an error if it failed
+  },
+}
+```
+
+<style>
+  code {
+    @apply text-sm
+  }
+</style>
+
+---
+
+# Commandes <img alt="cobra" src="/cobra.png" class="inline w-30 align-bottom" />
+
+```sh
+$ just help
+Use just if you need something to "just" be done
+
+Usage:
+  just [command]
+
+Available Commands:
+  completion  generate the autocompletion script for the specified shell
+  help        Help about any command
+  try         Try and possibly fail at something
+
+Flags:
+  -h, --help   help for just
+
+Use "just [command] --help" for more information about a command.
+```
+
+<style>
+  code {
+    @apply text-sm
+  }
+</style>
+
+---
+
+# Sous-commandes
+
+```
+$ docker image
+
+Usage:  docker image COMMAND
+
+Manage images
+
+Commands:
+  build       Build an image from a Dockerfile
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Display detailed information on one or more images
+  load        Load an image from a tar archive or STDIN
+  ls          List images
+  prune       Remove unused images
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rm          Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+
+Run 'docker image COMMAND --help' for more information on a command.
+```
+
+---
+
+# Les plus de <img alt="cobra" src="/cobra.png" class="inline w-30 align-bottom" />
+
+<v-clicks>
+
+ - Scaffolding
+ - Suggestions intelligentes
+ - Auto-complétion (bash, zsh, fish, powershell)
+ - Intégration avec viper
+
+</v-clicks>
