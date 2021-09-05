@@ -225,7 +225,7 @@ func main() {
 
 # <img alt="cobra" src="/cobra.png" class="inline w-40" />
 
-```go
+```go {all|7|8}
 var (
   author string
   verbose bool
@@ -261,7 +261,7 @@ Flags:
 layout: fact
 ---
 
-<img alt="pacman" src="/pacman.png" class="inline w-100" />
+# <img alt="pacman" src="/pacman.png" class="inline w-100" />
 
 ---
 
@@ -289,3 +289,34 @@ L'utilisation des flags comme opérations/commandes porte à confusion.
 
 La distinction se fait par la casse en en flag court, et disparaît en flag long...
 -->
+
+---
+layout: fact
+---
+
+# <img alt="git" src="/git.png" class="inline w-100" />
+
+---
+
+# Commandes <img alt="git" src="/git.png" class="inline w-20" />
+
+```sh {all|1|10}
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+	modified:   slides.md
+
+no changes added to commit
+$
+$ git commit -am "Add slides about git"
+[main 536e1f3] Add slides about git
+ 1 file changed, 25 insertions(+), 2 deletions(-)
+```
+
+<style>
+  code {
+    @apply text-sm
+  }
+</style>
