@@ -7,6 +7,11 @@ info: |
   
   [Sources](https://github.com/nlepage/build-userfriendly-cli-tool-talk)
 title: Construire un outil de CLI userfriendly
+layout: full
+class: bg-black
+---
+
+---
 layout: intro
 ---
 
@@ -415,12 +420,10 @@ Run 'docker image COMMAND --help' for more information on a command.
 </v-clicks>
 
 ---
-layout: fact
+layout: statement
 ---
 
-```
-git checkout
-```
+# git checkout ?
 
 <style>
   code {
@@ -443,3 +446,10 @@ flowchart TB
   co[git checkout] --> sw[git switch]
   co --> re[git restore]
 ```
+
+---
+layout: full
+class: bg-black
+---
+
+---

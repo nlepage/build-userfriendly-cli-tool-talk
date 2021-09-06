@@ -35,6 +35,12 @@ Le public visé :
  - Respecter les conventions (options, help, etc)
  - Options vs sous-commandes
  - Commandes fourre-tout
+ - Introduction catption ?
+ - xdg-open (fichier, ou URL)...
+ - config (répertoires...)
+ - advices (après ajout de répertoire, exemple commande pour générer ?)
+ - interactivité (saisie du bottom/top ?)
+ - logs sympa (émojis, couleur...)
 
 ## Idées
 
