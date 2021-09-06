@@ -323,7 +323,7 @@ $ git commit -am "Add slides about git"
 
 ---
 
-# Commandes <img alt="cobra" src="/cobra.png" class="inline w-30 align-bottom" />
+# Commandes <img alt="cobra" src="/cobra.png" class="inline w-30 mb-3" />
 
 ```go {all|5,6,11|5,7,11|5,8-11|1-3}
 func init() {
@@ -347,7 +347,7 @@ var tryCmd = &cobra.Command{
 
 ---
 
-# Commandes <img alt="cobra" src="/cobra.png" class="inline w-30 align-bottom" />
+# Commandes <img alt="cobra" src="/cobra.png" class="inline w-30 mb-3" />
 
 ```sh
 $ just help
@@ -403,7 +403,7 @@ Run 'docker image COMMAND --help' for more information on a command.
 
 ---
 
-# Les plus de <img alt="cobra" src="/cobra.png" class="inline w-30 align-bottom" />
+# Les plus de <img alt="cobra" src="/cobra.png" class="inline w-30 mb-3" />
 
 <v-clicks>
 
@@ -413,3 +413,33 @@ Run 'docker image COMMAND --help' for more information on a command.
  - Intégration avec viper
 
 </v-clicks>
+
+---
+layout: fact
+---
+
+```
+git checkout
+```
+
+<style>
+  code {
+    @apply text-5xl
+  }
+</style>
+
+---
+layout: statement
+---
+
+## Switch branches or restore working tree files
+
+---
+layout: center
+---
+
+```mermaid
+flowchart TB
+  co[git checkout] --> sw[git switch]
+  co --> re[git restore]
+```
