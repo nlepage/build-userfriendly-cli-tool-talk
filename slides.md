@@ -420,6 +420,12 @@ Run 'docker image COMMAND --help' for more information on a command.
 
 </v-clicks>
 
+<style>
+  ul {
+    @apply text-2xl
+  }
+</style>
+
 ---
 layout: statement
 ---
@@ -721,12 +727,6 @@ layout: statement
 # Un peu d'interactivité
 
 ---
-layout: center
----
-
-<img src="/catption-demo-3.gif" class="w-200">
-
----
 
 # mattn/isatty
 
@@ -741,3 +741,29 @@ if isatty.IsTerminal(os.Stdout.Fd()) && isatty.IsTerminal(os.Stdin.Fd()) {
     @apply text-sm
   }
 </style>
+
+---
+layout: center
+---
+
+<img src="/catption-demo-3.gif" class="w-200">
+
+---
+layout: statement
+---
+
+# Quoi d'autre ?
+
+---
+layout: statement
+---
+
+## Logs sympas (couleur, émojis, ...)
+
+<img src="/logrus.png" class="mt-5">
+
+---
+layout: statement
+---
+
+## Conseiller / guider l'utilisateur
