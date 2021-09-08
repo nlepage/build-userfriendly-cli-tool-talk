@@ -450,7 +450,7 @@ src: ./black.md
 layout: fact
 ---
 
-# 🐱
+# 🐱 catption
 
 ---
 layout: center
@@ -461,3 +461,111 @@ layout: center
 <style>
   img { @apply w-200 }
 </style>
+
+---
+
+# 🐱 catption
+
+```
+$ catption -h
+Cat caption generator CLI
+
+Usage:
+  catption [flags] <input file>
+
+Flags:
+  -b, --bottom string    Bottom text
+      --fontSize float   Font in points (default 96)
+  -h, --help             help for catption
+      --margin float     Top/bottom text margin (default 20)
+  -o, --out string       Output file (default "out.jpg")
+  -s, --size float       Output image size (default 1024)
+  -t, --top string       Top text
+  -v, --version          version for catption
+```
+
+<style>
+  code {
+    @apply text-sm
+  }
+</style>
+
+---
+layout: section
+---
+
+# Intégration avec l'OS
+
+<img src="windows.svg" class="inline w-50">
+<img src="linux.svg" class="inline w-50">
+
+---
+layout: section
+---
+
+# Ouvrir le fichier généré
+
+---
+
+# Ouvrir le fichier généré
+
+ - Windows : start
+ - macOS : open
+ - Linux : xdg-open
+
+<style>
+ul {
+  @apply text-2xl
+}
+</style>
+
+---
+
+# Ouvrir le fichier généré
+
+## 📄 opencmd_windows.go
+
+```go
+var openCmd = "start"
+```
+
+## 📄 opencmd_darwin.go
+
+```go
+var openCmd = "open"
+```
+
+
+## 📄 opencmd.go
+
+```go
+//go:build !windows && !darwin
+
+var openCmd = "xdg-open"
+```
+
+<style>
+h2 {
+  @apply mt-10
+}
+</style>
+
+
+---
+
+# Ouvrir le fichier généré
+
+Utiliser le package `os/exec` de la bibliothèque standard :
+
+```go {all|8}
+var cmd = &cobra.Command{
+  Use:  "catption [flags] <input file>",
+  Long: "Cat caption generator CLI",
+  Args: cobra.ExactArgs(1),
+  RunE: func(_ *cobra.Command, args []string) error {
+    // ...
+
+    return exec.Command(openCmd, out).Start()
+  },
+}
+```

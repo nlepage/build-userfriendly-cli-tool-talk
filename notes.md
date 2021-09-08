@@ -38,7 +38,7 @@ Le public visé :
  - Introduction catption ?
  - xdg-open (fichier, ou URL)...
  - config (répertoires...)
- - advices (après ajout de répertoire, exemple commande pour générer ?)
+ - advices (fichier non trouvé, exemple ajout répertoire)
  - interactivité (saisie du bottom/top ?)
  - logs sympa (émojis, couleur...)
 
