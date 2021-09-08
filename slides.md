@@ -7,10 +7,8 @@ info: |
   
   [Sources](https://github.com/nlepage/build-userfriendly-cli-tool-talk)
 title: Construire un outil de CLI userfriendly
-layout: full
-class: bg-black
+src: ./black.md
 ---
-
 ---
 layout: intro
 ---
@@ -41,10 +39,8 @@ Pas d'outil interactifs (éditeurs, REPL...)
 -->
 
 ---
-layout: full
-class: bg-black
+src: ./black.md
 ---
-
 ---
 
 ```sh {all|1}
@@ -448,8 +444,20 @@ flowchart TB
 ```
 
 ---
-layout: full
-class: bg-black
+src: ./black.md
+---
+---
+layout: fact
 ---
 
+# 🐱
+
 ---
+layout: center
+---
+
+![](catption-demo.gif)
+
+<style>
+  img { @apply w-200 }
+</style>
