@@ -456,11 +456,7 @@ layout: fact
 layout: center
 ---
 
-![](catption-demo.gif)
-
-<style>
-  img { @apply w-200 }
-</style>
+<img src="/catption-demo.gif" class="w-200">
 
 ---
 
@@ -496,8 +492,8 @@ layout: section
 
 # Intégration avec l'OS
 
-<img src="windows.svg" class="inline w-50">
-<img src="linux.svg" class="inline w-50">
+<img src="/windows.svg" class="inline w-50">
+<img src="/linux.svg" class="inline w-50">
 
 ---
 layout: section
