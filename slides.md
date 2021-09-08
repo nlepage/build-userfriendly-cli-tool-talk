@@ -565,3 +565,9 @@ var cmd = &cobra.Command{
   },
 }
 ```
+
+---
+layout: center
+---
+
+<img src="/catption-demo-2.gif" class="w-200">
