@@ -183,11 +183,10 @@ layout: fact
 
 ---
 layout: statement
-class: align-middle
 ---
 
 <h1 class="flex gap-30 items-end justify-center">
-  <img alt="cobra" src="/cobra.png" class="inline w-60" />
+  <img alt="cobra" src="/cobra.png" class="inline w-60 mb-1" />
   <div>urfave/cli</div>
 </h1>
 
@@ -510,9 +509,9 @@ layout: section
  - Linux : xdg-open
 
 <style>
-ul {
-  @apply text-2xl
-}
+  ul {
+    @apply text-2xl
+  }
 </style>
 
 ---
@@ -541,9 +540,13 @@ var openCmd = "xdg-open"
 ```
 
 <style>
-h2 {
-  @apply mt-10
-}
+  h2 {
+    @apply mt-10
+  }
+
+  code {
+    @apply text-sm
+  }
 </style>
 
 
@@ -565,6 +568,12 @@ var cmd = &cobra.Command{
   },
 }
 ```
+
+<style>
+  code {
+    @apply text-sm
+  }
+</style>
 
 ---
 layout: center
@@ -595,6 +604,12 @@ Flags:
   -v, --version          version for catption
 ```
 
+<style>
+  code {
+    @apply text-sm
+  }
+</style>
+
 ---
 src: integration-os.md
 ---
@@ -605,5 +620,124 @@ layout: section
 # Configurable
 
 ---
+layout: section
+---
 
+# Configurer mes dossiers d'images
 
+---
+
+# Configurer mes dossiers d'images
+
+```sh {all|5|8-10}
+$ catption help dir
+Manages input files directories
+
+Usage:
+  catption dir [command]
+
+Available Commands:
+  add         Adds an input files directory
+  list        Lists input files directories
+  remove      Removes an input files directory
+
+Flags:
+  -h, --help   help for dir
+
+Use "catption dir [command] --help" for more information about a command.
+```
+
+<style>
+  code {
+    @apply text-sm
+  }
+</style>
+
+---
+
+# Configurer mes dossiers d'images
+
+```sh {all|1-3|4-7|8-}
+$ catption dir add ~/Pictures/happy-cats
+$ catption dir add ~/Pictures/mad-cats
+$ catption dir add ~/Pictures/cute-dogs
+$ catption dir list
+/home/nico/Pictures/happy-cats
+/home/nico/Pictures/mad-cats
+/home/nico/Pictures/cute-dogs
+$ catption dir remove ~/Pictures/mad-cats
+$ catption dir list
+/home/nico/Pictures/happy-cats
+/home/nico/Pictures/cute-dogs
+```
+
+<style>
+  code {
+    @apply text-sm
+  }
+</style>
+
+---
+layout: statement
+---
+
+# <img alt="viper" src="/viper.png" class="inline w-80" />
+
+---
+
+# <img alt="viper" src="/viper.png" class="inline w-40" />
+
+ - Lire des fichiers de config (JSON, YAML, TOML, ...)
+ - Lire depuis d'autres sources (options, variables d'env, ...)
+ - Écrire des fichiers de config
+
+<style>
+  ul {
+    @apply text-2xl
+  }
+</style>
+
+---
+
+# Package `os`
+
+ - UserCacheDir() : returns the default root directory to use for user-specific cached data.
+ - UserConfigDir() : returns the default root directory to use for user-specific configuration data.
+ - UserHomeDir() : returns the current user's home directory.
+
+<style>
+  ul {
+    @apply text-xl
+  }
+</style>
+
+---
+src: black.md
+---
+---
+layout: statement
+---
+
+# Un peu d'interactivité
+
+---
+layout: center
+---
+
+<img src="/catption-demo-3.gif" class="w-200">
+
+---
+
+# mattn/isatty
+
+```go
+if isatty.IsTerminal(os.Stdout.Fd()) && isatty.IsTerminal(os.Stdin.Fd()) {
+  // Ajouter un peu d'interactivité ici
+}
+```
+
+<style>
+  code {
+    @apply text-sm
+  }
+</style>
