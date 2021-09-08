@@ -238,6 +238,12 @@ func init() {
 }
 ```
 
+<style>
+  code {
+    @apply text-sm
+  }
+</style>
+
 ---
 
 # <img alt="cobra" src="/cobra.png" class="inline w-40" />
@@ -262,13 +268,13 @@ Flags:
 layout: fact
 ---
 
-# <img alt="pacman" src="/pacman.png" class="inline w-100" />
+# <img alt="pacman" src="/pacman.png" class="inline w-30" /> pacman
 
 ---
 
 # <img alt="pacman" src="/pacman.png" class="inline w-10" /> pacman
 
-```sh {all|10}
+```sh {all|2|10}
 $ pacman -h
 usage:  pacman <operation> [...]
 operations:
@@ -295,7 +301,7 @@ La distinction se fait par la casse en en flag court, et disparaît en flag long
 layout: fact
 ---
 
-# <img alt="git" src="/git.png" class="inline w-100" />
+# <img alt="git" src="/git.png" class="inline w-50" />
 
 ---
 
@@ -487,14 +493,8 @@ Flags:
 </style>
 
 ---
-layout: section
+src: integration-os.md
 ---
-
-# Intégration avec l'OS
-
-<img src="/windows.svg" class="inline w-50">
-<img src="/linux.svg" class="inline w-50">
-
 ---
 layout: section
 ---
@@ -571,3 +571,39 @@ layout: center
 ---
 
 <img src="/catption-demo-2.gif" class="w-200">
+
+---
+
+# (Ne pas) Ouvrir le fichier généré
+
+```sh {all|12}
+$ catption -h
+Cat caption generator CLI
+
+Usage:
+  catption [flags] <input file>
+
+Flags:
+  -b, --bottom string    Bottom text
+      --fontSize float   Font in points (default 96)
+  -h, --help             help for catption
+      --margin float     Top/bottom text margin (default 20)
+      --open             Open file with system viewer (default true)
+  -o, --out string       Output file (default "out.jpg")
+  -s, --size float       Output image size (default 1024)
+  -t, --top string       Top text
+  -v, --version          version for catption
+```
+
+---
+src: integration-os.md
+---
+---
+layout: section
+---
+
+# Configurable
+
+---
+
+
