@@ -27,8 +27,7 @@ layout: intro
 Durant cette présentation :
  - Comprendre/chercher pourquoi outil CLI est userfriendly ?
  - S'appuyer notamment sur des exemples existants, trouver bonnes/mauvaises pratiques
- - Comment nous même construire (si possible facilement) ?
- - S'appuyer sur Go et écosystème
+ - FIXME 2 usages : outil d'automatosation et outil au jour le jour (slide ?)
 -->
 
 ---
@@ -88,6 +87,8 @@ root           8  0.0  0.0      0     0 ?        I<   12:00   0:00 [mm_percpu_wq
 Jusqu'aujourd'hui (talk) continuer utiliser ▶ sans savoir ce que signifiait aux
 
 Moins puisse dire, pas intuitif.
+
+a u x
 
 Options à une lettre sans tiret, pas très conventionnel... (en fait sauce BSD)
 
@@ -222,144 +223,53 @@ Avec en général variant courte -h
 
 Beaucoup choses à respecter...
 
-S'appuyer sur ▶
+Options parlant, permet modifier comportement outil.
+
+Formidable on en met partout... Dès fois ça va trop loin ▶
 -->
 
 ---
 layout: fact
 ---
 
-# Écosystème <img src="/Go-Logo_Blue.png" class="inline w-60" />
-
-<!--
-Go et écosystème autour
-
-Go:
- - Langage généraliste (API HTTP, microservice, cloud functions, gros projets docker, kub, sécu, data science)
- - Devenu populaire pour développer de l'outillage (autour docker, cloud, pleins d'autres domaines)
- - Compiler pour différents OS/archis
- - Bonne bibliothèque standard (bien maintenue)
- - Bonne communauté et bon écosystème OS
-
-Notamment pour outil ligne commande ▶
--->
+# 🐱 catption
 
 ---
-layout: statement
+layout: center
 ---
 
-<h1 class="flex gap-30 items-end justify-center">
-  <img alt="cobra" src="/cobra.png" class="inline w-60 mb-1" />
-  <div>urfave/cli</div>
-</h1>
-
-<!--
-Beaucoup de bibliothèques
-
-2 qui sortent du lot...
-
-Font tout tas chose pour nous, grandement faciliter tâche.
-
-Programmer outil ligne commande de manière descriptive...
-
-Regarder ce que ça donne avec cobra ▶
--->
+<img src="/catption-demo.gif" class="w-200">
 
 ---
 
-# <img alt="cobra" src="/cobra.png" class="inline w-40" />
-
-```go {all|1,2,11|1,3,11|1,4-6,11|1,7,11|1,8-11|13-18}
-var rootCmd = &cobra.Command{
-  Use:   "hugo",
-  Short: "Hugo is a very fast static site generator",
-  Long: `A Fast and Flexible Static Site Generator built with
-                love by spf13 and friends in Go.
-                Complete documentation is available at http://hugo.spf13.com`,
-  Version: "v1.2.3",
-  Run: func(cmd *cobra.Command, args []string) {
-    // Do Stuff Here
-  },
-}
-
-func main() {
-  if err := rootCmd.Execute(); err != nil {
-    fmt.Fprintln(os.Stderr, err)
-    os.Exit(1)
-  }
-}
-```
-
-<style>
-  code {
-    @apply text-sm
-  }
-</style>
-
-<!--
-Exemple petit programme cobra
-
-Créer commande appelle hugo :
- - Instancie structure type cobra.Command
- - Remplis champs ▶▶▶▶
- - Implem reçois notamment tableau arguments
-
-Fonction principale : Délègue gestion exécution commande en appelant méthode Execute
-
-Pas à gérer parsing options etc. !
-
-Justement options ▶
--->
-
----
-
-# <img alt="cobra" src="/cobra.png" class="inline w-40" />
-
-```go {all|7|8}
-var (
-  author string
-  verbose bool
-)
-
-func init() {
-  rootCmd.Flags().StringVar(&author, "author", "YOUR NAME", "Author name for copyright attribution")
-  rootCmd.Flags().BoolVarP(&verbose, "verbose", "v", false, "Verbose output")
-}
-```
-
-<style>
-  code {
-    @apply text-sm
-  }
-</style>
-
-
----
-
-# <img alt="cobra" src="/cobra.png" class="inline w-40" />
+# 🐱 catption
 
 ```
-$ hugo --help
-A Fast and Flexible Static Site Generator built with
-love by spf13 and friends in Go.
-Complete documentation is available at http://hugo.spf13.com
+$ catption -h
+Cat caption generator CLI
 
 Usage:
-  hugo [flags]
+  catption [flags] <input file>
 
 Flags:
-      --author string   Author name for copyright attribution (default "YOUR NAME")
-  -h, --help            help for hugo
-  -v, --verbose         Verbose output
-      --version         version for hugo
+  -b, --bottom string    Bottom text
+      --fontSize float   Font in points (default 96)
+  -h, --help             help for catption
+      --margin float     Top/bottom text margin (default 20)
+  -o, --out string       Output file (default "out.jpg")
+  -s, --size float       Output image size (default 1024)
+  -t, --top string       Top text
+  -v, --version          version for catption
 ```
 
+<style>
+  code {
+    @apply text-sm
+  }
+</style>
+
 <!--
-...
-
-Options parlant, permet modifier comportement outil.
-
-Formidable on en met partout... Dès fois ça va trop loin ▶
+Inverser avec le précédent ?
 -->
 
 ---
@@ -424,58 +334,6 @@ $
 $ git commit -am "Add slides about git"
 [main 536e1f3] Add slides about git
  1 file changed, 25 insertions(+), 2 deletions(-)
-```
-
-<style>
-  code {
-    @apply text-sm
-  }
-</style>
-
----
-
-# Commandes <img alt="cobra" src="/cobra.png" class="inline w-30 mb-3" />
-
-```go {all|5,6,11|5,7,11|5,8-11|1-3}
-func init() {
-  rootCmd.AddCommand(tryCmd)
-}
-
-var tryCmd = &cobra.Command{
-  Use:   "try",
-  Short: "Try and possibly fail at something",
-  RunE: func(cmd *cobra.Command, args []string) error {
-    // do something and return an error if it failed
-  },
-}
-```
-
-<style>
-  code {
-    @apply text-sm
-  }
-</style>
-
----
-
-# Commandes <img alt="cobra" src="/cobra.png" class="inline w-30 mb-3" />
-
-```sh
-$ just help
-Use just if you need something to "just" be done
-
-Usage:
-  just [command]
-
-Available Commands:
-  completion  generate the autocompletion script for the specified shell
-  help        Help about any command
-  try         Try and possibly fail at something
-
-Flags:
-  -h, --help   help for just
-
-Use "just [command] --help" for more information about a command.
 ```
 
 <style>
@@ -559,58 +417,21 @@ flowchart TB
   co --> re[git restore]
 ```
 
----
-src: ./black.md
----
----
-layout: fact
----
+<!--
+FIXME Faire grossir
+-->
 
-# 🐱 catption
-
----
-layout: center
----
-
-<img src="/catption-demo.gif" class="w-200">
-
----
-
-# 🐱 catption
-
-```
-$ catption -h
-Cat caption generator CLI
-
-Usage:
-  catption [flags] <input file>
-
-Flags:
-  -b, --bottom string    Bottom text
-      --fontSize float   Font in points (default 96)
-  -h, --help             help for catption
-      --margin float     Top/bottom text margin (default 20)
-  -o, --out string       Output file (default "out.jpg")
-  -s, --size float       Output image size (default 1024)
-  -t, --top string       Top text
-  -v, --version          version for catption
-```
-
-<style>
-  code {
-    @apply text-sm
-  }
-</style>
-
----
-src: integration-os.md
----
 ---
 layout: section
 ---
 
-# Ouvrir le fichier généré
+# Intégration avec l'OS
 
+<img src="/windows.svg" class="inline w-50">
+<img src="/linux.svg" class="inline w-50">
+
+---
+layout: section
 ---
 
 # Ouvrir le fichier généré
@@ -626,71 +447,14 @@ layout: section
 </style>
 
 ---
-
-# Ouvrir le fichier généré
-
-## 📄 opencmd_windows.go
-
-```go
-var openCmd = "start"
-```
-
-## 📄 opencmd_darwin.go
-
-```go
-var openCmd = "open"
-```
-
-
-## 📄 opencmd.go
-
-```go
-//go:build !windows && !darwin
-
-var openCmd = "xdg-open"
-```
-
-<style>
-  h2 {
-    @apply mt-10
-  }
-
-  code {
-    @apply text-sm
-  }
-</style>
-
-
----
-
-# Ouvrir le fichier généré
-
-Utiliser le package `os/exec` de la bibliothèque standard :
-
-```go {all|8}
-var cmd = &cobra.Command{
-  Use:  "catption [flags] <input file>",
-  Long: "Cat caption generator CLI",
-  Args: cobra.ExactArgs(1),
-  RunE: func(_ *cobra.Command, args []string) error {
-    // ...
-
-    return exec.Command(openCmd, out).Start()
-  },
-}
-```
-
-<style>
-  code {
-    @apply text-sm
-  }
-</style>
-
----
 layout: center
 ---
 
 <img src="/catption-demo-2.gif" class="w-200">
+
+<!--
+Changer de chat
+-->
 
 ---
 
@@ -721,9 +485,6 @@ Flags:
   }
 </style>
 
----
-src: integration-os.md
----
 ---
 layout: section
 ---
@@ -765,64 +526,6 @@ Use "catption dir [command] --help" for more information about a command.
 </style>
 
 ---
-
-# Configurer mes dossiers d'images
-
-```sh {all|1-3|4-7|8-}
-$ catption dir add ~/Pictures/happy-cats
-$ catption dir add ~/Pictures/mad-cats
-$ catption dir add ~/Pictures/cute-dogs
-$ catption dir list
-/home/nico/Pictures/happy-cats
-/home/nico/Pictures/mad-cats
-/home/nico/Pictures/cute-dogs
-$ catption dir remove ~/Pictures/mad-cats
-$ catption dir list
-/home/nico/Pictures/happy-cats
-/home/nico/Pictures/cute-dogs
-```
-
-<style>
-  code {
-    @apply text-sm
-  }
-</style>
-
----
-layout: statement
----
-
-# <img alt="viper" src="/viper.png" class="inline w-80" />
-
----
-
-# <img alt="viper" src="/viper.png" class="inline w-40" />
-
- - Lire des fichiers de config (JSON, YAML, TOML, ...)
- - Lire depuis d'autres sources (options, variables d'env, ...)
- - Écrire des fichiers de config
-
-<style>
-  ul {
-    @apply text-2xl
-  }
-</style>
-
----
-
-# Package `os`
-
- - UserCacheDir() : returns the default root directory to use for user-specific cached data.
- - UserConfigDir() : returns the default root directory to use for user-specific configuration data.
- - UserHomeDir() : returns the current user's home directory.
-
-<style>
-  ul {
-    @apply text-xl
-  }
-</style>
-
----
 src: black.md
 ---
 ---
@@ -832,43 +535,31 @@ layout: statement
 # Un peu d'interactivité
 
 ---
-
-# mattn/isatty
-
-```go
-if isatty.IsTerminal(os.Stdout.Fd()) && isatty.IsTerminal(os.Stdin.Fd()) {
-  // Ajouter un peu d'interactivité ici
-}
-```
-
-<style>
-  code {
-    @apply text-sm
-  }
-</style>
-
----
 layout: center
 ---
 
 <img src="/catption-demo-3.gif" class="w-200">
 
 ---
-layout: section
----
 
-## Conseiller / guider l'utilisateur
+FIXME ATTENTION vérifier que l'entrée et la sortie standard sont liées à un terminal
 
----
-layout: statement
 ---
 
 # Quoi d'autre ?
 
----
-layout: statement
+<v:clicks>
+
+ - Conseiller / guider l'utilisateur
+ - Logs sympas (couleur, émojis, ...)
+ - FIXME rappelle toi
+
+</v:clicks>
+
 ---
 
-## Logs sympas (couleur, émojis, ...)
+FIXME Ecosystème golang
 
-<img src="/logrus.png" class="mt-5">
+---
+
+FIXME conclusion mon ps aux
