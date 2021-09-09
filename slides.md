@@ -4,12 +4,9 @@ info: |
   ## Construire un outil de CLI userfriendly
 
   <br>
-  
+
   [Sources](https://github.com/nlepage/build-userfriendly-cli-tool-talk)
 title: Construire un outil de CLI userfriendly
-src: ./black.md
----
----
 layout: intro
 ---
 
@@ -23,9 +20,15 @@ layout: intro
 </div>
 
 <!--
-Bien présenter les 2 axes du talk :
- - Faire un outil userfriendly
- - S'appuyer sur l'écosystème Go pour ça
+- Consultant / Formateur Z Nantes
+ - Principalement Dev fullstack JS
+ - Go par passion sur projets OS
+
+Durant cette présentation :
+ - Comprendre/chercher pourquoi outil CLI est userfriendly ?
+ - S'appuyer notamment sur des exemples existants, trouver bonnes/mauvaises pratiques
+ - Comment nous même construire (si possible facilement) ?
+ - S'appuyer sur Go et écosystème (pourquoi Go ? beaucoup d'outillage donc écosystème riche dans domaine)
 -->
 
 ---
@@ -35,7 +38,9 @@ layout: fact
 # ⚠ Disclaimer ⚠
 
 <!--
-Pas d'outil interactifs (éditeurs, REPL...)
+Ne seront pas abordés outil hautement interactifs (éditeurs, REPL...)
+
+Domaine à part entière.
 -->
 
 ---
@@ -80,12 +85,23 @@ root           8  0.0  0.0      0     0 ?        I<   12:00   0:00 [mm_percpu_wq
 </style>
 
 <!--
-Pas intuitif.
+Jusqu'aujourd'hui (talk) continuer utiliser ▶ sans savoir ce que signifiait aux
 
-Options à une lettre sans tiret, pas très conventionnel...
+Moins puisse dire, pas intuitif.
 
-Mais alors justement, qu'est-ce qui est conventionnel ?
-Qu'est-ce qu'on s'attend à avoir ?
+Options à une lettre sans tiret, pas très conventionnel... (en fait sauce BSD)
+
+Bonne manière outil moins déroutant plus intuitif ▶
+-->
+
+---
+layout: section
+---
+
+# Conventions
+
+<!--
+utilisées par les outils les plus répandus
 -->
 
 ---
@@ -93,6 +109,10 @@ layout: section
 ---
 
 # Options
+
+<!--
+donc conventions niveau options...
+-->
 
 ---
 
@@ -113,11 +133,25 @@ $ grep \
   }
 </style>
 
+<!--
+Pas juste noms 1 lettre
+
+ - précédés 2 tirets
+ - plusieurs mots séparés tirets
+
+Recherche :
+ - ▶ ignorant casse
+ - ▶ inversant le résultat (uniquement lignes ne correspondants pas)
+ - ▶ compte (simplement nombre lignes)
+
+▶ nombre lignes contenant pas needle dans haystack.txt en ignorant la casse
+-->
+
 ---
 
 # Options courtes
 
-```sh {all|1|3|all}
+```sh {all|1|3}
 $ grep -i -v -c needle haystack.txt
 21
 $ grep -ivc needle haystack.txt
@@ -129,6 +163,14 @@ $ grep -ivc needle haystack.txt
     @apply text-lg
   }
 </style>
+
+<!--
+Optionnellement (pas obligatoire, options les plus utilisées) noms courts correspondant noms longs
+
+ - ▶ 1 lettre
+ - précédés d'une seul tiret
+ - ▶ possible de grouper
+-->
 
 ---
 
@@ -174,6 +216,10 @@ Pattern selection and interpretation:
     @apply text-sm
   }
 </style>
+
+<!--
+Avec en général variant courte -h
+-->
 
 ---
 layout: fact
