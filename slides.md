@@ -219,6 +219,10 @@ Pattern selection and interpretation:
 
 <!--
 Avec en général variant courte -h
+
+Beaucoup choses à respecter...
+
+S'appuyer sur ▶
 -->
 
 ---
