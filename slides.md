@@ -28,7 +28,7 @@ Durant cette présentation :
  - Comprendre/chercher pourquoi outil CLI est userfriendly ?
  - S'appuyer notamment sur des exemples existants, trouver bonnes/mauvaises pratiques
  - Comment nous même construire (si possible facilement) ?
- - S'appuyer sur Go et écosystème (pourquoi Go ? beaucoup d'outillage donc écosystème riche dans domaine)
+ - S'appuyer sur Go et écosystème
 -->
 
 ---
@@ -231,6 +231,19 @@ layout: fact
 
 # Écosystème <img src="/Go-Logo_Blue.png" class="inline w-60" />
 
+<!--
+Go et écosystème autour
+
+Go:
+ - Langage généraliste (API HTTP, microservice, cloud functions, gros projets docker, kub, sécu, data science)
+ - Devenu populaire pour développer de l'outillage (autour docker, cloud, pleins d'autres domaines)
+ - Compiler pour différents OS/archis
+ - Bonne bibliothèque standard (bien maintenue)
+ - Bonne communauté et bon écosystème OS
+
+Notamment pour outil ligne commande ▶
+-->
+
 ---
 layout: statement
 ---
@@ -239,6 +252,18 @@ layout: statement
   <img alt="cobra" src="/cobra.png" class="inline w-60 mb-1" />
   <div>urfave/cli</div>
 </h1>
+
+<!--
+Beaucoup de bibliothèques
+
+2 qui sortent du lot...
+
+Font tout tas chose pour nous, grandement faciliter tâche.
+
+Programmer outil ligne commande de manière descriptive...
+
+Regarder ce que ça donne avec cobra ▶
+-->
 
 ---
 
@@ -271,6 +296,21 @@ func main() {
   }
 </style>
 
+<!--
+Exemple petit programme cobra
+
+Créer commande appelle hugo :
+ - Instancie structure type cobra.Command
+ - Remplis champs ▶▶▶▶
+ - Implem reçois notamment tableau arguments
+
+Fonction principale : Délègue gestion exécution commande en appelant méthode Execute
+
+Pas à gérer parsing options etc. !
+
+Justement options ▶
+-->
+
 ---
 
 # <img alt="cobra" src="/cobra.png" class="inline w-40" />
@@ -293,6 +333,7 @@ func init() {
   }
 </style>
 
+
 ---
 
 # <img alt="cobra" src="/cobra.png" class="inline w-40" />
@@ -312,6 +353,14 @@ Flags:
   -v, --verbose         Verbose output
       --version         version for hugo
 ```
+
+<!--
+...
+
+Options parlant, permet modifier comportement outil.
+
+Formidable on en met partout... Dès fois ça va trop loin ▶
+-->
 
 ---
 layout: fact
@@ -341,9 +390,15 @@ use 'pacman {-h --help}' with an operation for available options
 ```
 
 <!--
-L'utilisation des flags comme opérations/commandes porte à confusion.
+Utilise flags (préfixé par - --) comme opérations.
 
-La distinction se fait par la casse en en flag court, et disparaît en flag long...
+Distinction se fait uniquement par casse flag court
+
+Exemple installer package -S
+
+Distinction disparait flag long
+
+Porte à confusion, normalement flags peut mettre plusieurs, difficile apprendre à se servir
 -->
 
 ---
@@ -799,6 +854,12 @@ layout: center
 <img src="/catption-demo-3.gif" class="w-200">
 
 ---
+layout: section
+---
+
+## Conseiller / guider l'utilisateur
+
+---
 layout: statement
 ---
 
@@ -811,9 +872,3 @@ layout: statement
 ## Logs sympas (couleur, émojis, ...)
 
 <img src="/logrus.png" class="mt-5">
-
----
-layout: statement
----
-
-## Conseiller / guider l'utilisateur
