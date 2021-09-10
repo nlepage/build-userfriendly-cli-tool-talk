@@ -386,7 +386,7 @@ docker image: pas une commande mais groupe
 
 Peut aller plus loin, google cloud, gcloud hiérarchie groupes commande
 
-
+a parlé de git, ses commandes, status, commit, git aussi défauts...
 -->
 
 ---
@@ -407,18 +407,18 @@ layout: statement
 
 ## Switch branches or restore working tree files
 
----
-layout: center
----
-
-```mermaid
-flowchart TB
-  co[git checkout] --> sw[git switch]
-  co --> re[git restore]
-```
-
 <!--
-FIXME Faire grossir
+Problème: fait 2 choses
+
+Nom pas clair (sans parler confusion svn checkout)
+
+Pattern à éviter, commande fourre-tout
+
+Commande:
+ - nom clair : permet comprendre ce qu'elle fait
+ - but précis : sinon à découper
+
+a été corrigé...
 
 Vous avais pas dit, moi même... s'apelle ▶
 -->
@@ -465,6 +465,10 @@ Flags:
 
 <!--
 Bien respecter avait dit...
+
+Options longues, options courtes, pas de commande (petit outil, ne sait faire qu'une chose)
+
+le voici en action  ▶
 -->
 
 ---
@@ -472,6 +476,12 @@ layout: center
 ---
 
 <img src="/catption-demo.gif" class="w-200">
+
+<!--
+...
+
+Comment aller plus loin ? Plus sympa, plus facile à utiliser ?
+-->
 
 ---
 layout: section
@@ -482,8 +492,26 @@ layout: section
 <img src="/windows.svg" class="inline w-50">
 <img src="/linux.svg" class="inline w-50">
 
+<!--
+OS ont beaucoup fonctionnalités
+
+Intéressant s'appuyer dessus.
+
+Outil sorte cadre ligne commande.
+
+Pour catption par exemple...
+-->
+
 ---
 layout: section
+---
+
+# Ouvrir le fichier généré
+
+<!--
+Plus avoir à taper commande en plus
+-->
+
 ---
 
 # Ouvrir le fichier généré
@@ -497,6 +525,16 @@ layout: section
     @apply text-2xl
   }
 </style>
+
+<!--
+exemple windows commande start
+
+prend chemin fichier, ouvre avec programme par défaut prévu pour type fichier
+
+équivalents...
+
+fonctionne pour tout type d'URL (exemple HTTP)
+-->
 
 ---
 layout: center
