@@ -27,7 +27,7 @@ layout: intro
 Durant cette présentation :
  - Comprendre/chercher pourquoi outil CLI est userfriendly ?
  - S'appuyer notamment sur des exemples existants, trouver bonnes/mauvaises pratiques
- - FIXME 2 usages : outil d'automatosation et outil au jour le jour (slide ?)
+ - Fin, comme s'appuyer écosystème Go construire notre propre outil CLI
 -->
 
 ---
@@ -43,8 +43,14 @@ Domaine à part entière.
 -->
 
 ---
-src: ./black.md
+layout: full
+class: bg-black
 ---
+
+<!--
+Premières expériences ligne commande, Développeur Java grosse DSI...
+-->
+
 ---
 
 ```sh {all|1}
@@ -84,13 +90,13 @@ root           8  0.0  0.0      0     0 ?        I<   12:00   0:00 [mm_percpu_wq
 </style>
 
 <!--
-Jusqu'aujourd'hui (talk) continuer utiliser ▶ sans savoir ce que signifiait aux
+Jusqu'aujourd'hui (talk) continuer utiliser petite commande ▶ sans savoir ce que signifiait 3 lettres aux
 
-Moins puisse dire, pas intuitif.
+Moins puisse dire, pas intuitif, difficile deviner.
 
-a u x
+▶ a ▶ u ▶ x
 
-Options à une lettre sans tiret, pas très conventionnel... (en fait sauce BSD)
+Options à une lettre sans tiret, pas très conventionnel... (selon doc options sauce BSD)
 
 Bonne manière outil moins déroutant plus intuitif ▶
 -->
@@ -112,7 +118,11 @@ layout: section
 # Options
 
 <!--
-donc conventions niveau options...
+donc conventions niveau options ligne commande...
+
+options: flags passe aux outils pour modifier leur comportement
+
+Déjà préférable d'avoir systématiquement options longues ▶
 -->
 
 ---
@@ -137,15 +147,20 @@ $ grep \
 <!--
 Pas juste noms 1 lettre
 
- - précédés 2 tirets
- - plusieurs mots séparés tirets
+Options longues:
+ - tjrs précédées 2 tirets
+ - peuvent même plusieurs mots séparés tirets
 
-Recherche :
+Exemple grep, recherche :
  - ▶ ignorant casse
- - ▶ inversant le résultat (uniquement lignes ne correspondants pas)
- - ▶ compte (simplement nombre lignes)
+ - ▶ inversant le résultat (uniquement lignes ne correspondents pas)
+ - ▶ compte (nombre lignes)
 
-▶ nombre lignes contenant pas needle dans haystack.txt en ignorant la casse
+▶ nombre lignes ne contenant pas needle dans haystack.txt en ignorant la casse
+
+Beaucoup plus clair, on comprend mieux ce qu'on fait
+
+Si écrit script pour automatiser qqchose, bonne idée utiliser options longues...
 -->
 
 ---
@@ -166,11 +181,20 @@ $ grep -ivc needle haystack.txt
 </style>
 
 <!--
-Optionnellement (pas obligatoire, options les plus utilisées) noms courts correspondant noms longs
+Options courtes correspondant aux options longues
 
- - ▶ 1 lettre
+
+Pas obligatoire... options les plus utilisées
+
+Option courte:
  - précédés d'une seul tiret
- - ▶ possible de grouper
+ - 1 lettre
+
+▶ Simplement remplacer options longues (pas entrain d'écrire script, simplement dans terminal, pour aller plus vite)
+
+▶ Possible de grouper derrière 1 seul tiret
+
+Dernière convention
 -->
 
 ---
