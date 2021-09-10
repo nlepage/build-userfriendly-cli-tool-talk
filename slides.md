@@ -619,7 +619,7 @@ Nouveau groupe commande dir
 
 # Configurer mes dossiers d'images de chats
 
-```sh {all|5|8-10}
+```sh {all|8-10}
 $ catption help dir
 Manages input files directories
 
@@ -643,14 +643,29 @@ Use "catption dir [command] --help" for more information about a command.
   }
 </style>
 
----
-src: black.md
----
+<!--
+3 petites commandes permettent configurer mes répertoires chats...
+
+top: plus à mettre chemin complet fichier, juste nom, catption va trouver...
+
+Autre manière aider utilisateur, cette fois restant plus cadre ligne commande...
+-->
+
 ---
 layout: statement
 ---
 
 # Un peu d'interactivité
+
+<!--
+pas faire outil interactif
+
+mais un peu interactivité à petite dose dans cas bien spécifiques
+
+exemple catption, appelle commande avec juste nom fichier, me suis tromper, oublier options
+
+dans ce cas, propose saisir texte
+-->
 
 ---
 layout: center
@@ -658,25 +673,52 @@ layout: center
 
 <img src="/catption-demo-3.gif" class="w-200">
 
+<!--
+Attention, encore fois, pas perdre vue outil ligne commande sert automatisation...
+
+Pour éviter problème, vérifier que entrée/sortie standard sont attachées terminal, si non pas d'interactif
+
+arrive bientôt fin...
+-->
+
 ---
 
-FIXME ATTENTION vérifier que l'entrée et la sortie standard sont liées à un terminal
+# Idées en plus
 
----
-
-# Quoi d'autre ?
-
-<v:clicks>
+<v-clicks>
 
  - Conseiller / guider l'utilisateur
  - Logs sympas (couleur, émojis, ...)
- - FIXME rappelle toi
 
-</v:clicks>
+</v-clicks>
+
+<style>
+  ul {
+    @apply text-2xl
+  }
+</style>
+
+<!--
+▶ conseiller guider
+
+git fait très bien, notamment git status, en fonction état dépôt git propose commandes...
+
+aussi did you mean...
+
+▶ logs sympas
+
+là aussi qqchose à déclencher si sortie standard attachée terminal
+
+si non plutôt logs destinés fichier log, donc sans couleur, format interprétable par autre programme
+-->
 
 ---
 
-FIXME Ecosystème golang
+FIXME catption golang
+
+---
+
+autres langages
 
 ---
 
