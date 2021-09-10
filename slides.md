@@ -714,12 +714,35 @@ si non plutôt logs destinés fichier log, donc sans couleur, format interpréta
 
 ---
 
-FIXME catption golang
+# 🐱 [github.com/nlepage/catption](https://github.com/nlepage/catption)
+
+## <img alt="cobra" src="/cobra.png" class="w-60 inline mb-7 mr-10"><img alt="viper" src="/viper.png" class="w-60 inline">
+
+## [github.com/mattn/go-isatty](https://github.com/mattn/go-isatty)
+
+## [Packages os et os/exec de la bibliothèque standard](https://pkg.go.dev/os)
+
+<style>
+  h1 {
+    @apply mb-20
+  }
+
+  h2 {
+    @apply mb-10
+  }
+</style>
 
 ---
 
-autres langages
+# Autres langages
 
----
+ - NodeJS : [yargs](https://yvonnickfrin.dev/seven-libraries-to-build-nodejs-cli)
+ - Java : [Picocli](https://picocli.info/)
+ - Python : [Click](https://click.palletsprojects.com/en/latest/)
+ - Et bien d'autres
 
-FIXME conclusion mon ps aux
+<style>
+  ul {
+    @apply text-2xl
+  }
+</style>
