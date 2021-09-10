@@ -27,7 +27,6 @@ layout: intro
 Durant cette présentation :
  - Comprendre/chercher pourquoi outil CLI est userfriendly ?
  - S'appuyer notamment sur des exemples existants, trouver bonnes/mauvaises pratiques
- - Fin, comme s'appuyer écosystème Go construire notre propre outil CLI
 -->
 
 ---
@@ -145,9 +144,6 @@ $ grep \
 </style>
 
 <!--
-Pas juste noms 1 lettre
-
-Options longues:
  - tjrs précédées 2 tirets
  - peuvent même plusieurs mots séparés tirets
 
@@ -158,9 +154,7 @@ Exemple grep, recherche :
 
 ▶ nombre lignes ne contenant pas needle dans haystack.txt en ignorant la casse
 
-Beaucoup plus clair, on comprend mieux ce qu'on fait
-
-Si écrit script pour automatiser qqchose, bonne idée utiliser options longues...
+Beaucoup plus clair, on comprend mieux ce qu'on fait (bien pour script, automatisation)
 -->
 
 ---
@@ -746,3 +740,15 @@ si non plutôt logs destinés fichier log, donc sans couleur, format interpréta
     @apply text-2xl
   }
 </style>
+
+---
+layout: center
+---
+
+## Slides : [nlepage.github.io/build-userfriendly-cli-tool-talk](https://nlepage.github.io/build-userfriendly-cli-tool-talk/)
+
+<!--
+Pour conclure vous donner le ps aux que j'aimerais
+
+process list --all-users --filter java
+-->
