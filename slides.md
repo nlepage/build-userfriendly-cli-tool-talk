@@ -543,7 +543,13 @@ layout: center
 <img src="/catption-demo-2.gif" class="w-200">
 
 <!--
-Changer de chat
+Déjà plus sympa
+
+Utilise ma commande, vois tout suite résultat
+
+Par contre pas perdre vue, outil ligne commande aussi utilisé automatiser choses, écrire scripts
+
+Important pouvoir désactiver ce type fonctionnalité
 -->
 
 ---
@@ -575,21 +581,43 @@ Flags:
   }
 </style>
 
+<!--
+pouvoir ne pas ouvrir...
+
+moyen simple  ▶ ajouter option
+
+autre moyen  ▶
+-->
+
 ---
 layout: section
 ---
 
 # Configurable
 
+<!--
+par exemple comme git (nom, email, ssh), commande git config
+
+Rentre aussi un peu catégorie intégration OS, stocker config endroit spécifique selon système (exemple linux)
+
+pour catption  ▶
+-->
+
 ---
 layout: section
 ---
 
-# Configurer mes dossiers d'images
+# Configurer mes dossiers d'images de chats
+
+<!--
+Pas envie avoir à écrire fichier config à la main...
+
+Nouveau groupe commande dir
+-->
 
 ---
 
-# Configurer mes dossiers d'images
+# Configurer mes dossiers d'images de chats
 
 ```sh {all|5|8-10}
 $ catption help dir
