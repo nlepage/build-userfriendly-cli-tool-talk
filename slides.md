@@ -183,7 +183,6 @@ $ grep -ivc needle haystack.txt
 <!--
 Options courtes correspondant aux options longues
 
-
 Pas obligatoire... options les plus utilisées
 
 Option courte:
@@ -245,55 +244,13 @@ Pattern selection and interpretation:
 <!--
 Avec en général variant courte -h
 
-Beaucoup choses à respecter...
+Quand même quelques critères à respecter...
+
+Garantit d'avoir outils auront mérite pas dérouter utilisateurs.
 
 Options parlant, permet modifier comportement outil.
 
-Formidable on en met partout... Dès fois ça va trop loin ▶
--->
-
----
-layout: fact
----
-
-# 🐱 catption
-
----
-layout: center
----
-
-<img src="/catption-demo.gif" class="w-200">
-
----
-
-# 🐱 catption
-
-```
-$ catption -h
-Cat caption generator CLI
-
-Usage:
-  catption [flags] <input file>
-
-Flags:
-  -b, --bottom string    Bottom text
-      --fontSize float   Font in points (default 96)
-  -h, --help             help for catption
-      --margin float     Top/bottom text margin (default 20)
-  -o, --out string       Output file (default "out.jpg")
-  -s, --size float       Output image size (default 1024)
-  -t, --top string       Top text
-  -v, --version          version for catption
-```
-
-<style>
-  code {
-    @apply text-sm
-  }
-</style>
-
-<!--
-Inverser avec le précédent ?
+Piège à éviter, exemple ▶
 -->
 
 ---
@@ -301,6 +258,12 @@ layout: fact
 ---
 
 # <img alt="pacman" src="/pacman.png" class="inline w-30" /> pacman
+
+<!--
+Gestionnaire paquet arch linux...
+
+A la particularité de ▶
+-->
 
 ---
 
@@ -324,15 +287,21 @@ use 'pacman {-h --help}' with an operation for available options
 ```
 
 <!--
-Utilise flags (préfixé par - --) comme opérations.
+Utilise flags (préfixé par - --) comme  ▶ opérations...
 
-Distinction se fait uniquement par casse flag court
+Exemple installer package ▶ -S ou --sync
 
-Exemple installer package -S
+Problème : distinction entre opération et option
+
+Uniquement par casse flag court
 
 Distinction disparait flag long
 
-Porte à confusion, normalement flags peut mettre plusieurs, difficile apprendre à se servir
+Porte à confusion
+
+Normalement flags pas obligatoire, ici opération une et une seule...
+
+Pour outil capable faire différente chose, bonne manière d'éviter ça, faire comme ▶
 -->
 
 ---
@@ -340,6 +309,12 @@ layout: fact
 ---
 
 # <img alt="git" src="/git.png" class="inline w-50" />
+
+<!--
+présente plus...
+
+git a système de ▶
+-->
 
 ---
 
@@ -366,9 +341,21 @@ $ git commit -am "Add slides about git"
   }
 </style>
 
+<!--
+Afficher status dépot ▶
+
+Créer nouveau commit ▶
+
+Options -am...
+
+Distinction claire commande, options donne infos à commande (pas obligatoire)
+
+Peut pousser plus loin comme docker, groupe de commandes ▶
+-->
+
 ---
 
-# Sous-commandes
+# Groupes de commandes
 
 ```
 $ docker image
@@ -394,24 +381,13 @@ Commands:
 Run 'docker image COMMAND --help' for more information on a command.
 ```
 
----
+<!--
+docker image: pas une commande mais groupe
 
-# Les plus de <img alt="cobra" src="/cobra.png" class="inline w-30 mb-3" />
+Peut aller plus loin, google cloud, gcloud hiérarchie groupes commande
 
-<v-clicks>
 
- - Scaffolding
- - Suggestions intelligentes
- - Auto-complétion (bash, zsh, fish, powershell)
- - Intégration avec viper
-
-</v-clicks>
-
-<style>
-  ul {
-    @apply text-2xl
-  }
-</style>
+-->
 
 ---
 layout: statement
@@ -443,7 +419,59 @@ flowchart TB
 
 <!--
 FIXME Faire grossir
+
+Vous avais pas dit, moi même... s'apelle ▶
 -->
+
+---
+layout: fact
+---
+
+# 🐱 catption
+
+<!--
+Permet créer rapidement meme cats
+
+Image avec chats et phrases haut et/out bas image
+-->
+
+---
+
+# 🐱 catption
+
+```
+$ catption -h
+Cat caption generator tool
+
+Usage:
+  catption [flags] <input file>
+
+Flags:
+  -b, --bottom string    Bottom text
+      --fontSize float   Font in points (default 96)
+  -h, --help             help for catption
+      --margin float     Top/bottom text margin (default 20)
+  -o, --out string       Output file (default "out.jpg")
+  -s, --size float       Output image size (default 1024)
+  -t, --top string       Top text
+  -v, --version          version for catption
+```
+
+<style>
+  code {
+    @apply text-sm
+  }
+</style>
+
+<!--
+Bien respecter avait dit...
+-->
+
+---
+layout: center
+---
+
+<img src="/catption-demo.gif" class="w-200">
 
 ---
 layout: section
