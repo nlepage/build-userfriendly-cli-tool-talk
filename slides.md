@@ -27,6 +27,7 @@ layout: intro
 Durant cette présentation :
  - Comprendre/chercher pourquoi outil CLI est userfriendly ?
  - S'appuyer notamment sur des exemples existants, trouver bonnes/mauvaises pratiques
+ - Trouver d'autres idées pour être plus userfriendly
 -->
 
 ---
@@ -242,7 +243,7 @@ Quand même quelques critères à respecter...
 
 Garantit d'avoir outils auront mérite pas dérouter utilisateurs.
 
-Options parlant, permet modifier comportement outil.
+Options permettent modifier comportement outil.
 
 Piège à éviter, exemple ▶
 -->
@@ -336,7 +337,7 @@ $ git commit -am "Add slides about git"
 </style>
 
 <!--
-Afficher status dépot ▶
+Afficher état dépot ▶
 
 Créer nouveau commit ▶
 
