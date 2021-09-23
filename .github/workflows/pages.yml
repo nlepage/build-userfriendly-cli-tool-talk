@@ -10,16 +10,16 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.3.0
 
-      - name: Checkout branch
+      - name: Checkout ref
         uses: actions/checkout@v2
         with:
-          path: ${{github.ref}}
+          path: ref
 
       - name: Install and build
         run: |
           yarn --frozen-lockfile
           yarn build --base /build-userfriendly-cli-tool-talk/$(basename ${{github.ref}})/
-        working-directory: ${{github.ref}}
+        working-directory: ref
 
       - name: Checkout pages
         uses: actions/checkout@v2
@@ -29,9 +29,10 @@ jobs:
 
       - name: Commit and push pages
         run: |
-          rm -rf ${{github.ref}}
-          mkdir $(basename ${{github.ref}})
-          mv ../${{github.ref}}/dist/* $(basename ${{github.ref}})
+          dir=$(basename ${{github.ref}})
+          rm -rf $dir
+          mkdir $dir
+          mv ../ref/dist/* $dir
           git add .
           git diff --staged --quiet --exit-code && exit # no changes
           git config user.name "Nicolas Lepage (actions)"
