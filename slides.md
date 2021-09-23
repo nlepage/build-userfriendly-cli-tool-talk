@@ -484,7 +484,8 @@ layout: section
 # Intégration avec l'OS
 
 <img src="/windows.svg" class="inline w-50">
-<img src="/linux.svg" class="inline w-50">
+<img src="/linux.svg" class="inline w-40">
+<img src="/pomme.png" class="inline w-30">
 
 <!--
 OS ont beaucoup fonctionnalités
