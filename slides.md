@@ -145,7 +145,7 @@ $ grep \
 </style>
 
 <!--
- - tjrs précédées 2 tirets
+- mots précédés 2 tirets
  - peuvent même plusieurs mots séparés tirets
 
 Exemple grep, recherche :
@@ -181,8 +181,7 @@ Options courtes correspondant aux options longues
 Pas obligatoire... options les plus utilisées
 
 Option courte:
- - précédés d'une seul tiret
- - 1 lettre
+ - 1 lettre précédée d'une seul tiret
 
 ▶ Simplement remplacer options longues (pas entrain d'écrire script, simplement dans terminal, pour aller plus vite)
 
@@ -427,7 +426,7 @@ layout: fact
 <!--
 Permet créer rapidement meme cats
 
-Image avec chats et phrases haut et/out bas image
+Image avec chats et phrases haut et/ou bas image
 -->
 
 ---
@@ -639,7 +638,7 @@ Use "catption dir [command] --help" for more information about a command.
 </style>
 
 <!--
-3 petites commandes permettent configurer mes répertoires chats...
+▶ 3 petites commandes permettent configurer mes répertoires chats...
 
 top: plus à mettre chemin complet fichier, juste nom, catption va trouver...
 
@@ -731,9 +730,9 @@ si non plutôt logs destinés fichier log, donc sans couleur, format interpréta
 
 # Autres langages
 
- - NodeJS : [yargs](https://yvonnickfrin.dev/seven-libraries-to-build-nodejs-cli)
- - Java : [Picocli](https://picocli.info/)
- - Python : [Click](https://click.palletsprojects.com/en/latest/)
+ - NodeJS : [commander](https://www.npmjs.com/package/commander)
+ - Java : [picocli](https://picocli.info/)
+ - Python : [click](https://click.palletsprojects.com/en/latest/)
  - Et bien d'autres
 
 <style>
