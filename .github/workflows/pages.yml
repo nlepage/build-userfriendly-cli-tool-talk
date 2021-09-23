@@ -1,7 +1,7 @@
 name: Pages
 on:
   push:
-    branches: [ main ]
+    branches: [main,tz]
 
 jobs:
   pages:
@@ -10,16 +10,16 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.3.0
 
-      - name: Checkout main
+      - name: Checkout branch
         uses: actions/checkout@v2
         with:
-          path: main
+          path: ${{github.ref}}
 
       - name: Install and build
         run: |
           yarn --frozen-lockfile
           yarn build --base /build-userfriendly-cli-tool-talk/
-        working-directory: main
+        working-directory: ${{github.ref}}
 
       - name: Checkout pages
         uses: actions/checkout@v2
@@ -29,8 +29,9 @@ jobs:
 
       - name: Commit and push pages
         run: |
-          rm -r *
-          mv ../main/dist/* .
+          rm -rf ${{github.ref}}
+          mkdir ${{github.ref}}
+          mv ../${{github.ref}}/dist/* ${{github.ref}}
           git add .
           git diff --staged --quiet --exit-code && exit # no changes
           git config user.name "Nicolas Lepage (actions)"
