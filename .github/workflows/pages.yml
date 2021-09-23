@@ -30,8 +30,8 @@ jobs:
       - name: Commit and push pages
         run: |
           rm -rf ${{github.ref}}
-          mkdir ${{github.ref}}
-          mv ../${{github.ref}}/dist/* ${{github.ref}}
+          mkdir $(basename ${{github.ref}})
+          mv ../${{github.ref}}/dist/* $(basename ${{github.ref}})
           git add .
           git diff --staged --quiet --exit-code && exit # no changes
           git config user.name "Nicolas Lepage (actions)"
