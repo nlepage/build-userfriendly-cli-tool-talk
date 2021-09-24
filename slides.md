@@ -463,15 +463,9 @@ Bien respecter avait dit...
 Options longues, options courtes, pas de commande (petit outil, ne sait faire qu'une chose)
 
 le voici en action  ▶
--->
 
----
-layout: center
----
+DEMO
 
-<img src="/catption-demo.gif" class="w-200">
-
-<!--
 ...
 
 Comment aller plus loin ? Plus sympa, plus facile à utiliser ?
@@ -529,18 +523,10 @@ prend chemin fichier, ouvre avec programme par défaut prévu pour type fichier
 équivalents...
 
 fonctionne pour tout type d'URL (exemple HTTP)
--->
 
----
-layout: center
----
+DEMO
 
-<img src="/catption-demo-2.gif" class="w-200">
-
-<!--
-Déjà plus sympa
-
-Utilise ma commande, vois tout suite résultat
+Déjà plus sympa, utilise ma commande, vois tout suite résultat
 
 Par contre pas perdre vue, outil ligne commande aussi utilisé automatiser choses, écrire scripts
 
@@ -660,15 +646,9 @@ mais un peu interactivité à petite dose dans cas bien spécifiques
 exemple catption, appelle commande avec juste nom fichier, me suis tromper, oublier options
 
 dans ce cas, propose saisir texte
--->
 
----
-layout: center
----
+DEMO
 
-<img src="/catption-demo-3.gif" class="w-200">
-
-<!--
 Attention, encore fois, pas perdre vue outil ligne commande sert automatisation...
 
 Pour éviter problème, vérifier que entrée/sortie standard sont attachées terminal, si non pas d'interactif
@@ -746,7 +726,7 @@ si non plutôt logs destinés fichier log, donc sans couleur, format interpréta
 layout: center
 ---
 
-## Slides : [nlepage.github.io/build-userfriendly-cli-tool-talk](https://nlepage.github.io/build-userfriendly-cli-tool-talk/)
+## Slides : [nlepage.github.io/build-userfriendly-cli-tool-talk](https://nlepage.github.io/build-userfriendly-cli-tool-talk/tz/)
 
 <!--
 Pour conclure vous donner le ps aux que j'aimerais
