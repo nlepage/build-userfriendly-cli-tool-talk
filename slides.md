@@ -92,7 +92,7 @@ root           8  0.0  0.0      0     0 ?        I<   12:00   0:00 [mm_percpu_wq
 <!--
 Jusqu'aujourd'hui (talk) continuer utiliser petite commande ▶ sans savoir ce que signifiait 3 lettres aux
 
-Moins puisse dire, pas intuitif, difficile deviner.
+Moins puisse dire, difficile deviner.
 
 ▶ a ▶ u ▶ x
 
@@ -181,7 +181,7 @@ Options courtes correspondant aux options longues
 Pas obligatoire... options les plus utilisées
 
 Option courte:
- - 1 lettre précédée d'une seul tiret
+ - 1 lettre précédée d'un seul tiret
 
 ▶ Simplement remplacer options longues (pas entrain d'écrire script, simplement dans terminal, pour aller plus vite)
 
@@ -464,7 +464,7 @@ Options longues, options courtes, pas de commande (petit outil, ne sait faire qu
 
 le voici en action  ▶
 
-DEMO
+DEMO standing MAIS! mais c la TZ!
 
 ...
 
@@ -524,7 +524,7 @@ prend chemin fichier, ouvre avec programme par défaut prévu pour type fichier
 
 fonctionne pour tout type d'URL (exemple HTTP)
 
-DEMO
+DEMO knife OH MY DOG
 
 Déjà plus sympa, utilise ma commande, vois tout suite résultat
 
@@ -647,7 +647,7 @@ exemple catption, appelle commande avec juste nom fichier, me suis tromper, oubl
 
 dans ce cas, propose saisir texte
 
-DEMO
+DEMO dinner coucou
 
 Attention, encore fois, pas perdre vue outil ligne commande sert automatisation...
 
