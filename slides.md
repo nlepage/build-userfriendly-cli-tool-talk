@@ -580,7 +580,9 @@ pouvoir ne pas ouvrir...
 
 moyen simple  ▶ ajouter option
 
-autre moyen  ▶
+autre fonctionnalité assez similaire: intégration presse-papier
+
+pour aller plus loin  ▶
 -->
 
 ---
@@ -682,6 +684,7 @@ arrive bientôt fin...
 <v-clicks>
 
  - Conseiller / guider l'utilisateur
+ - Autocomplétion personalisée
  - Logs sympas (couleur, émojis, ...)
 
 </v-clicks>
@@ -742,13 +745,20 @@ si non plutôt logs destinés fichier log, donc sans couleur, format interpréta
 </style>
 
 ---
+
+# Références
+
+ - https://www.gnu.org/software/libc/manual/html_node/Argument-Syntax.html
+ - https://www.freedesktop.org/wiki/Software/xdg-utils/
+
+---
 layout: center
 ---
 
 ## Slides : [nlepage.github.io/build-userfriendly-cli-tool-talk](https://nlepage.github.io/build-userfriendly-cli-tool-talk/)
 
 <!--
-Pour conclure vous donner le ps aux que j'aimerais
+Pour conclure vous donner mon ps aux idéal
 
 process list --all-users --filter java
 -->
