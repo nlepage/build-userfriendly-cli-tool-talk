@@ -1,7 +1,10 @@
 name: Pages
 on:
   push:
-    branches: [main,tz]
+    branches:
+      - "*"
+    tags:
+      - "*"
 
 jobs:
   pages:
@@ -41,4 +44,4 @@ jobs:
           git push
         working-directory: pages
         env:
-          MESSAGE: ${{github.event.commits[0].message}}
+          MESSAGE: "🚀 Deploy pages for ref ${{github.ref}}"
