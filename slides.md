@@ -24,7 +24,7 @@ layout: intro
 </div>
 
 <!--
- - Merci orga, merci à vous
+- Merci orga, merci à vous
  - Consultant / Formateur Z Nantes
  - Principalement Dev fullstack JS
  - Go par passion sur projets OS
@@ -489,7 +489,7 @@ layout: section
 # Intégration avec l'OS
 
 <img src="/windows.svg" class="inline w-50">
-<img src="/linux.svg" class="inline w-40">
+<img src="/linux.svg" class="inline w-40 mx-8">
 <img src="/pomme.png" class="inline w-30">
 
 <!--
@@ -718,24 +718,78 @@ si non plutôt logs destinés fichier log, donc sans couleur, format interpréta
 -->
 
 ---
+layout: section
+---
 
 # 🐱 [github.com/nlepage/catption](https://github.com/nlepage/catption)
 
-## <a class="!border-none" href="https://github.com/spf13/cobra#readme"><img alt="cobra" src="/cobra.png" class="w-40 inline mb-4"></a><a href="https://github.com/spf13/viper#readme" class="!border-none"><img alt="viper" src="/viper.png" class="w-40 inline ml-10"></a>
-
-## [github.com/mattn/go-isatty](https://github.com/mattn/go-isatty)
-
-## [Packages os et os/exec de la bibliothèque standard](https://pkg.go.dev/os)
+## <img alt="Go" src="/go.png" class="w-60 inline">
 
 <style>
-  h1 {
-    @apply mb-20
-  }
-
   h2 {
-    @apply mb-10
+    @apply text-center
   }
 </style>
+
+---
+layout: section
+---
+
+# <a class="!border-none" href="https://github.com/spf13/cobra#readme"><img alt="cobra" src="/cobra.png" class="w-60 inline mb-12 mr-2"></a> / <a href="https://github.com/spf13/viper#readme" class="!border-none"><img alt="viper" src="/viper.png" class="w-60 inline ml-2 mb-5"></a>
+
+<!--
+Steve Francia, Lead product Golang @Google, Hugo
+
+Cobra:
+ - Créer CLI manière descriptive
+ - Générer aide
+ - Did you mean
+ - Auto-complétion custom, avec installation type shell + répandus
+ - Kubernetes...
+ - Intégration viper
+
+Viper: Configuration, lecture/écriture fichier YAML, TOML, JSON...
+-->
+
+---
+layout: section
+---
+
+# <a href="https://pkg.go.dev/std">Bibliothèque standard <img alt="Go" src="/go.png" class="w-40 inline mb-3"></a>
+
+<!--
+Notamment package os et sous-packages:
+ - Bonne couche abstraction OS (quel qu'il soit)
+ - Exemple: Dossiers utilisateurs (home, cache, config)
+
+Beaucoup petites librairies très spécialisées...
+-->
+
+---
+layout: section
+---
+
+# [github.com/mattn/go-isatty](https://github.com/mattn/go-isatty)
+
+<!--
+Permet tester entrées/sorties liées à terminaux
+-->
+
+---
+layout: section
+---
+
+# [github.com/golang-design/clipboard](https://github.com/golang-design/clipboard)
+
+<style>
+h1 {
+  @apply text-5xl
+}
+</style>
+
+<!--
+Interagir avec presse-papier
+-->
 
 ---
 
@@ -763,6 +817,10 @@ si non plutôt logs destinés fichier log, donc sans couleur, format interpréta
  - https://git-scm.com/docs
  - https://docs.docker.com/engine/reference/commandline/image/
  - https://www.freedesktop.org/wiki/Software/xdg-utils/
+ - https://github.com/spf13
+ - https://pkg.go.dev/std
+ - https://github.com/mattn/go-isatty
+ - https://github.com/golang-design/clipboard
 
 ---
 layout: center
