@@ -19,6 +19,8 @@ layout: intro
 <div class="mt-10">
   <img src="/nicolas-lepage.jpg" class="rounded-full shadow-md inline w-25 mx-4" />
   Nicolas Lepage - <a href="https://twitter.com/njblepage">@njblepage</a>
+  <img src="/osxp.png" class="inline w-30 ml-16" />
+  <img src="/zenika.png" class="inline w-30 ml-16" />
 </div>
 
 <!--
