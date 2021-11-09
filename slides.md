@@ -717,7 +717,7 @@ si non plutôt logs destinés fichier log, donc sans couleur, format interpréta
 
 # 🐱 [github.com/nlepage/catption](https://github.com/nlepage/catption)
 
-## <img alt="cobra" src="/cobra.png" class="w-60 inline mb-7 mr-10"><img alt="viper" src="/viper.png" class="w-60 inline">
+## <a class="!border-none" href="https://github.com/spf13/cobra#readme"><img alt="cobra" src="/cobra.png" class="w-40 inline mb-4"></a><a href="https://github.com/spf13/viper#readme" class="!border-none"><img alt="viper" src="/viper.png" class="w-40 inline ml-10"></a>
 
 ## [github.com/mattn/go-isatty](https://github.com/mattn/go-isatty)
 
@@ -752,7 +752,12 @@ si non plutôt logs destinés fichier log, donc sans couleur, format interpréta
 
 # Références
 
+ - https://man.archlinux.org/man/ps.1.en
  - https://www.gnu.org/software/libc/manual/html_node/Argument-Syntax.html
+ - https://man.archlinux.org/man/grep.1.en
+ - https://man.archlinux.org/man/pacman.8.en
+ - https://git-scm.com/docs
+ - https://docs.docker.com/engine/reference/commandline/image/
  - https://www.freedesktop.org/wiki/Software/xdg-utils/
 
 ---
