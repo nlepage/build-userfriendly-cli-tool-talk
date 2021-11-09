@@ -768,7 +768,7 @@ si non plutôt logs destinés fichier log, donc sans couleur, format interpréta
 layout: center
 ---
 
-## Slides : [nlepage.github.io/build-userfriendly-cli-tool-talk](https://nlepage.github.io/build-userfriendly-cli-tool-talk/)
+## Slides : [nlepage.github.io/build-userfriendly-cli-tool-talk/osxp](https://nlepage.github.io/build-userfriendly-cli-tool-talk/osxp/)
 
 <!--
 Pour conclure vous donner mon ps aux idéal
