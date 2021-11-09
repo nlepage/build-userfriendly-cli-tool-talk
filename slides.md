@@ -20,7 +20,8 @@ layout: intro
 </div>
 
 <!--
-- Consultant / Formateur Z Nantes
+ - Merci orga, merci à vous
+ - Consultant / Formateur Z Nantes
  - Principalement Dev fullstack JS
  - Go par passion sur projets OS
 
@@ -701,6 +702,8 @@ arrive bientôt fin...
 git fait très bien, notamment git status, en fonction état dépôt git propose commandes...
 
 aussi did you mean...
+
+▶ autocomplétion personnalisée
 
 ▶ logs sympas
 
