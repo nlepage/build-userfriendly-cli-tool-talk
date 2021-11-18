@@ -653,7 +653,7 @@ exemple catption, appelle commande avec juste nom fichier, me suis tromper, oubl
 
 dans ce cas, propose saisir texte
 
-DEMO 
+DEMO octo
 
 Attention, encore fois, pas perdre vue outil ligne commande sert automatisation...
 
