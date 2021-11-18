@@ -19,7 +19,7 @@ layout: intro
 <div class="mt-10">
   <img src="/nicolas-lepage.jpg" class="rounded-full shadow-md inline w-25 mx-4" />
   Nicolas Lepage - <a href="https://twitter.com/njblepage">@njblepage</a>
-  <img src="/osxp.png" class="inline w-30 ml-16" />
+  <img src="/codeurs.png" class="inline w-40 ml-16" />
   <img src="/zenika.png" class="inline w-30 ml-16" />
 </div>
 
@@ -471,16 +471,8 @@ Bien respecter avait dit...
 Options longues, options courtes, pas de commande (petit outil, ne sait faire qu'une chose)
 
 le voici en action  ▶
--->
 
----
-layout: center
----
-
-<img src="/catption-demo.gif" class="w-200">
-
-<!--
-...
+DEMO hi / salut les copdeurs
 
 Comment aller plus loin ? Plus sympa, plus facile à utiliser ?
 -->
@@ -530,22 +522,14 @@ Plus avoir à taper commande en plus
 </style>
 
 <!--
-exemple windows commande start
+exemple windows commande start, équivalents...
 
 prend chemin fichier, ouvre avec programme par défaut prévu pour type fichier
 
-équivalents...
-
 fonctionne pour tout type d'URL (exemple HTTP)
--->
 
----
-layout: center
----
+DEMO knife / OH MY DOG
 
-<img src="/catption-demo-2.gif" class="w-200">
-
-<!--
 Déjà plus sympa
 
 Utilise ma commande, vois tout suite résultat
@@ -668,15 +652,9 @@ mais un peu interactivité à petite dose dans cas bien spécifiques
 exemple catption, appelle commande avec juste nom fichier, me suis tromper, oublier options
 
 dans ce cas, propose saisir texte
--->
 
----
-layout: center
----
+DEMO 
 
-<img src="/catption-demo-3.gif" class="w-200">
-
-<!--
 Attention, encore fois, pas perdre vue outil ligne commande sert automatisation...
 
 Pour éviter problème, vérifier que entrée/sortie standard sont attachées terminal, si non pas d'interactif
@@ -839,7 +817,7 @@ Interagir avec presse-papier
 layout: center
 ---
 
-## Slides : [nlepage.github.io/build-userfriendly-cli-tool-talk/osxp](https://nlepage.github.io/build-userfriendly-cli-tool-talk/osxp/)
+## Slides : [nlepage.github.io/build-userfriendly-cli-tool-talk/codeurs](https://nlepage.github.io/build-userfriendly-cli-tool-talk/codeurs/)
 
 <!--
 Pour conclure vous donner mon ps aux idéal
