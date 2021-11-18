@@ -25,7 +25,7 @@ layout: intro
 
 <!--
 - Merci orga, merci à vous
- - Consultant / Formateur Z Nantes
+ - Consultant / Formateur Z Nantes (Conseil/expertise, Projet, Formation)
  - Principalement Dev fullstack JS
  - Go par passion sur projets OS
 
@@ -33,6 +33,7 @@ Durant cette présentation :
  - Comprendre/chercher pourquoi outil CLI est userfriendly ?
  - S'appuyer notamment sur des exemples existants, trouver bonnes/mauvaises pratiques
  - Trouver d'autres idées pour être plus userfriendly
+ - Comment s'appuyer éco-système OSS Go
 -->
 
 ---
@@ -99,7 +100,7 @@ Jusqu'aujourd'hui (talk) continuer utiliser petite commande ▶ sans savoir ce q
 
 Moins puisse dire, pas intuitif, difficile deviner.
 
-▶ a ▶ u ▶ x
+▶ a ▶ x ▶ u
 
 Options à une lettre sans tiret, pas très conventionnel... (selon doc options sauce BSD)
 
@@ -125,7 +126,7 @@ layout: section
 <!--
 donc conventions niveau options ligne commande...
 
-options: flags passe aux outils pour modifier leur comportement
+options: flags passe aux outils pour modifier comportement
 
 Déjà préférable d'avoir systématiquement options longues ▶
 -->
@@ -186,7 +187,7 @@ Options courtes correspondant aux options longues
 Pas obligatoire... options les plus utilisées
 
 Option courte:
- - 1 lettre précédée d'une seul tiret
+ - 1 lettre précédée d'un seul tiret
 
 ▶ Simplement remplacer options longues (pas entrain d'écrire script, simplement dans terminal, pour aller plus vite)
 
@@ -247,6 +248,8 @@ Quand même quelques critères à respecter...
 
 Garantit d'avoir outils auront mérite pas dérouter utilisateurs.
 
+GNU/POSIX
+
 Options permettent modifier comportement outil.
 
 Piège à éviter, exemple ▶
@@ -298,7 +301,7 @@ Distinction disparait flag long
 
 Porte à confusion
 
-Normalement flags pas obligatoire, ici opération une et une seule...
+Normalement flags pas obligatoire, ici une et une seule opération...
 
 Pour outil capable faire différente chose, bonne manière d'éviter ça, faire comme ▶
 -->
@@ -547,7 +550,7 @@ Déjà plus sympa
 
 Utilise ma commande, vois tout suite résultat
 
-Par contre pas perdre vue, outil ligne commande aussi utilisé automatiser choses, écrire scripts
+Par contre pas perdre vue, outil ligne commande aussi utilisé automatiser tâches, écrire scripts
 
 Important pouvoir désactiver ce type fonctionnalité
 -->
@@ -586,9 +589,7 @@ pouvoir ne pas ouvrir...
 
 moyen simple  ▶ ajouter option
 
-autre fonctionnalité assez similaire: intégration presse-papier
-
-pour aller plus loin  ▶
+autre idée pour aller plus loin  ▶
 -->
 
 ---
@@ -609,9 +610,11 @@ pour catption  ▶
 layout: section
 ---
 
-# Configurer mes dossiers d'images de chats
+# Configurer mes répertoires d'images de chats
 
 <!--
+plus à mettre chemin complet fichier, juste nom, catption va trouver...
+
 Pas envie avoir à écrire fichier config à la main...
 
 Nouveau groupe commande dir
@@ -619,7 +622,7 @@ Nouveau groupe commande dir
 
 ---
 
-# Configurer mes dossiers d'images de chats
+# Configurer mes répertoires d'images de chats
 
 ```sh {all|8-10}
 $ catption help dir
@@ -647,8 +650,6 @@ Use "catption dir [command] --help" for more information about a command.
 
 <!--
 ▶ 3 petites commandes permettent configurer mes répertoires chats...
-
-top: plus à mettre chemin complet fichier, juste nom, catption va trouver...
 
 Autre manière aider utilisateur, cette fois restant plus cadre ligne commande...
 -->
@@ -692,6 +693,7 @@ arrive bientôt fin...
  - Conseiller / guider l'utilisateur
  - Autocomplétion personalisée
  - Logs sympas (couleur, émojis, ...)
+ - Intégration presse-papier
 
 </v-clicks>
 
@@ -715,6 +717,9 @@ aussi did you mean...
 là aussi qqchose à déclencher si sortie standard attachée terminal
 
 si non plutôt logs destinés fichier log, donc sans couleur, format interprétable par autre programme
+
+▶ similaire ouverture fichier: intégration presse-papier
+
 -->
 
 ---
@@ -730,6 +735,14 @@ layout: section
     @apply text-center
   }
 </style>
+
+<!--
+Dispo OSS
+
+implémenté en Go
+
+s'appuie sur éco-système OSS Go
+-->
 
 ---
 layout: section
