@@ -160,24 +160,19 @@
     js-yaml "^4.1.0"
 
 "@slidev/theme-default@*":
-  version "0.19.1"
-  resolved "https://registry.yarnpkg.com/@slidev/theme-default/-/theme-default-0.19.1.tgz#2862091deca5bab84d148f92f93d9f603edc0527"
-  integrity sha512-SB98kdLzFevpKONZcIla5byQdTiIqaf+jKJi8Shy0pxUDT+aMpkfKq1yudgjnN9yt7E/NH7xB9menZHQov0zDw==
+  version "0.21.1"
+  resolved "https://registry.yarnpkg.com/@slidev/theme-default/-/theme-default-0.21.1.tgz#ae321802116df7f599e4e3b6ca07356ed2c6c714"
+  integrity sha512-Hy5MKbkRi5IoKRh4CPjUCdLmjDVubtPfAkKXq6Bvd2VxnYFAbC/82ZY8Jg8NQ7Mkb7p/33POTq0enS0oCmx4lg==
   dependencies:
-    "@slidev/types" "^0.19.6"
+    "@slidev/types" "^0.22.7"
     codemirror-theme-vars "^0.1.1"
     prism-theme-vars "^0.2.2"
-    theme-vitesse "^0.1.11"
+    theme-vitesse "^0.1.12"
 
-"@slidev/types@0.22.7":
+"@slidev/types@0.22.7", "@slidev/types@^0.22.7":
   version "0.22.7"
   resolved "https://registry.yarnpkg.com/@slidev/types/-/types-0.22.7.tgz#abe1c81fedd5db1475428832f65253f95722a6d8"
   integrity sha512-mCVKQbcGTv6d6n9aHpYNp5U04HF+FMbpY083vqpJ6Folc805BB1Am02eubaW0J6nM+dSOu2dDgPY+kIjs75sAQ==
-
-"@slidev/types@^0.19.6":
-  version "0.19.9"
-  resolved "https://registry.yarnpkg.com/@slidev/types/-/types-0.19.9.tgz#ed29b8f92b5bf501cbeb83f597e0a7e13ae9b580"
-  integrity sha512-hpQeTIUbCwTFOw5m1h5TuJkwJhpZ77VUIaI4PDUboB1Unk9jaNl9Ok0dvLMWN9vlsKmqeVxhkonXTWNKPUBHjQ==
 
 "@types/estree@^0.0.48":
   version "0.0.48"
@@ -2098,10 +2093,10 @@ terser@^4.0.0:
     source-map "~0.6.1"
     source-map-support "~0.5.12"
 
-theme-vitesse@^0.1.11:
-  version "0.1.12"
-  resolved "https://registry.yarnpkg.com/theme-vitesse/-/theme-vitesse-0.1.12.tgz#0b30c2c2a83c2e4bacb603238c508ce9154e2b7d"
-  integrity sha512-lJLDcQm9/It6Aj+dr6FUHx8Ppy7COi53Ui2iSP5B4DJxNM+spaUPIPIOileSM8kZn60KsfLsV6eQzoknuQa7/A==
+theme-vitesse@^0.1.12:
+  version "0.1.13"
+  resolved "https://registry.yarnpkg.com/theme-vitesse/-/theme-vitesse-0.1.13.tgz#865c0dee5fef3fa7c6262769141931c6ccb0ee48"
+  integrity sha512-wSbqvmgqBUY8YF51qvZ1qIdj+6T2QoeLyJzZ+VL7LW3ClWkHn/T5ciiWprgOyjaKRlZg/Af6cevJbDBNLSKkhw==
 
 thenify-all@^1.0.0:
   version "1.6.0"
