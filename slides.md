@@ -8,6 +8,7 @@ info: |
   [Sources](https://github.com/nlepage/build-userfriendly-cli-tool-talk)
 title: Construire un outil de CLI userfriendly
 routerMode: hash
+download: true
 layout: intro
 ---
 
